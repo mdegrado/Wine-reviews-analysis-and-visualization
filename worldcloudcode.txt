@@ -1,0 +1,20 @@
+library(tm)
+library(wordcloud)
+
+rm(list=ls()) # Removes all objects to prevent results from previous runs being carried over into new runs.
+
+words <- Corpus(DirSource("C:/data/Rwordcloud/wine/clean99up/")) # Put all documents in this directory in plain text format.
+inspect(words)
+
+words <- tm_map(words, stripWhitespace)
+words <- tm_map(words, tolower)
+words <- tm_map(words, removeWords, stopwords('english'))
+words <- tm_map(words, stemDocument)
+words <- tm_map(words, removePunctuation) # Optional
+words <- tm_map(words, removeNumbers) # Optional
+words <- tm_map(words, PlainTextDocument)
+
+wordcloud(words, scale=c(4,0.5), max.words=50, random.order=FALSE, rot.per=0.35, 
+          use.r.layout=FALSE, colors=brewer.pal(8, 'Dark2'))
+		  
+lapply(words, function(x) write.table( data.frame(x), "C:/data/Rwordcloud/wine/clean99up/99and100.txt"  , append= T, sep=',' ))
