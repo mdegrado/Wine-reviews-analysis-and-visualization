@@ -3,6 +3,7 @@
 Created on Thu Mar  1 19:45:49 2018
 
 @author: mdegra200 adapted from example on kaggle
+Linear model to predict wine scores from wine taster description
 """
 
 import numpy as np # linear algebra
@@ -35,6 +36,8 @@ y = df['points'] # df points
 #also removing stop words
 from sklearn.feature_extraction.text import TfidfVectorizer
 vectorizer = TfidfVectorizer(stop_words='english',analyzer='word')
+#http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+#Converts a collection of raw documents to a matrix of TF-IDF features.
 x = vectorizer.fit_transform(df['description']) # x is vectorized description
 
 
