@@ -1065,7 +1065,7 @@ div.WordSection1
 	text-indent:0in;}
 @list l0:level1 lfo1
 	{mso-level-numbering:continue;
-	mso-level-text:•;
+	mso-level-text:Â•;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	mso-level-legacy:yes;
@@ -1077,7 +1077,7 @@ div.WordSection1
 	font-family:"Arial",sans-serif;}
 @list l0:level1 lfo2
 	{mso-level-numbering:continue;
-	mso-level-text:•;
+	mso-level-text:Â•;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	mso-level-legacy:yes;
