@@ -1,12 +1,20 @@
 ## Create a word cloud from a text file
-# install.packages('tm')
-# install.packages('wordcloud')
-# install.packages('SnowballC')
+# Used to read in wine tasters descrption of wine
+
+
+
+install.packages('tm')
+install.packages('wordcloud')
+install.packages('SnowballC')
 
 library(tm)
 library(wordcloud)
 
 rm(list=ls()) # Removes all objects to prevent results from previous runs being carried over into new runs.
+
+# Reads whole directory, so I include only wine taster descriptions column into CSV in this location and no other data
+# Used excel to filter top and bottom wines by score points and ran this same code against them separately
+# Whole wine data set took very long time to process to was better perorming to use the top and bottom wine.  
 
 words <- Corpus(DirSource("C:/data/wine/")) # Put all documents in this directory in plain text format.
 inspect(words)
@@ -14,13 +22,17 @@ inspect(words)
 words <- tm_map(words, stripWhitespace)
 words <- tm_map(words, tolower)
 words <- tm_map(words, removeWords, stopwords('english'))
-words <- tm_map(words, stemDocument)
+
+#Removed stem step as it was truncating words and wasn't working correctly, more research needed ot see why
+#words <- tm_map(words, stemDocument)
+
 words <- tm_map(words, removePunctuation) # Optional
 words <- tm_map(words, removeNumbers) # Optional
 words <- tm_map(words, PlainTextDocument)
 
 wordcloud(words, scale=c(4,0.5), max.words=50, random.order=FALSE, rot.per=0.35, 
           use.r.layout=FALSE, colors=brewer.pal(8, 'Dark2'))
-		  
+
+#This writes out a list of the clean words
 lapply(words, function(x) write.table( data.frame(x), "C:/data/wine/clean.txt"  , append= T, sep=',' ))
 
