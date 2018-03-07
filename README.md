@@ -1,36 +1,52 @@
-# Wine-reviews-analysis-and-visualization
-
-MSD692 Data Science Practicum
-Project Proposal 
-
-
-
-Project Title: Wine reviews analysis and visualization
-
-Description: Analysis, modeling and visualization of wine review data.
-
-Data Science task types: 
-Data acquisition, cleaning, preparation, normalization, modeling and visualization. Text analytics including sentiment analysis and predictive and topic modeling research.
-
-Data description:
-Wine review data from https://www.kaggle.com/zynicide/wine-reviews. The data consists of 130 thousand wine reviews from 11/24/2017. Data consists of wine rating, title, variety, description, country, province, region 1, region 2, winery, designation, price, taster name, taster twitter handle.
-
-Data Analysis methods used:
-Hoping to have time in the timeline for some visualizations in the Tableau reporting tool. Given current research with R having GGPLOT and Python having a Seaborne package for visualizations the Tableau work may not fit into the timeline. Also will discuss in the timeline the choosing of types of models to run but currently planning on doing exploratory data analysis on the data first and then choosing the model appropriately. 
-I want to look at different modeling ideas and see if there is a correlation between score and price which is mentioned on Kaggle already, but still want to repeat those results. I also wanted to look at breaking the words up in the description to features and see if any specific feature or features relate to pricing or wine score. Then using kernel density most likely using Python or Tableau I would like to product a map visualization on some of the key findings.
-Research will be done on LDA, LPAR, Naïve Bayes, Random forest, feature extraction, kernel density and other techniques. Narrowing down what to use will be done in week 3 and other techniques and tools can be identified for use in the next Practicum class.
-
-Expected challenges and mitigation plan:
-While researching the data set I see issues with special characters in the data and some reports from Kaggle of duplication in wine review column. The data quality and preparation tasks will be given extra time in the timeline. Several text analytics ideas can be used for this data so in week 2 the actual methods will need to be finalized so that they can be given appropriate time in project timeline. It will be essential that by end of week three the models and tools are chosen so that correct data cleansing and time for modeling is reserved.
-
-Project timeline:
-Week 1 and 2 will be spent researching data sets and modeling techniques. End of week 1 will be spent on initial proposal. Week 2 will be spent doing more research and revising the project plan based on research and proposal feedback.
-Weeks 3-6 will be spent on the data analysis including data preparation and cleanup. This is where final model will be chosen and run most likely will be using Python.
-Week 7 I would like to spend completely focusing on visualizations in appropriate tool and perhaps Tableau if time permits.
-Week 8 will be spent preparing presentation and posting and publishing final version.
-
-References:
-VanderPlas, J. (2016). Python data science handbook: Essential tools for working with data. J. VanderPlas.–O'Reilly Media
-
-Kaggle: Wine review data from https://www.kaggle.com/zynicide/wine-reviews
-
+{\rtf1\ansi\ansicpg1252
+{\fonttbl
+{\f1\fnil\fcharset0\fprq0 Arial;}
+{\f2\fnil\fcharset0\fprq0 Calibri;}
+}
+{\colortbl;
+\red0\green0\blue0;
+\red0\green0\blue0;
+\red0\green0\blue255;
+}
+{\stylesheet
+{\s1\li360\fi-360\kerning24\fs56\cf1\lang1033\level1 heading 1;}
+{\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\level2 heading 2;}
+{\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\level3 heading 3;}
+{\s4\li2520\fi-360\kerning24\cf1\lang1033\level4 heading 4;}
+{\s5\li3240\fi-360\kerning24\cf1\lang1033\level5 heading 5;}
+{\s6\li3960\fi-360\kerning24\cf1\lang1033\level6 heading 6;}
+{\s7\li4680\fi-360\kerning24\cf1\lang1033\level7 heading 7;}
+{\s8\li5400\fi-360\kerning24\cf1\lang1033\level8 heading 8;}
+{\s9\li6120\fi-360\kerning24\cf1\lang1033\level9 heading 9;}
+}
+\pard\plain\ltrpar\s1\li360\fi-360\kerning24\fs56\cf1\lang1033 {\f1 \par 
+}\pard\plain\ltrpar\s1\li360\fi-360\kerning24\fs56\cf1\lang1033 {\f1 \par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Introduction, My Background\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Project }{\f2\fs48\cf2 Introduction/Motivation (Explain what your project is about}{\f2\fs48\cf2 )\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Database Technology student and Data Manager.\par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Exploratory data analysis\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Learning and developing reports in Tableau\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Learning and developing word cloud in R\par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Deeper understanding the wine reviews\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Do low/high scores have correlations to certain words in tasters description?\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Can that be quantified using a Na\'efve Bayes feature classification model in Python that lists most informative features?\par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Understanding relationship of wine taster description and points\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Python Machine Learning}{\f2\fs48\cf2 \par 
+}\pard\plain\ltrpar\s1\li360\fi-360\kerning24\fs56\cf1\lang1033 {\f1 \par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Exploratory data analysis tools used\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Excel\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Tableau \par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 R \'96 Word Clouds\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Python plots\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\f2\fs48\cf2 \par 
+}\pard\plain\ltrpar\s2\li1080\fi-360\kerning24\fs48\cf1\lang1033\li360 {\pntext\pard\plain\f1\fs56 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs56{\pntxtb \'95}}{\f2\fs56\cf2 Modeling and Machine Learning - Python\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Na\'efve Bayes feature classification model\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Logistic Regression prediction\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Na\'efve }{\f2\fs48\cf2 Bayes }{\f2\fs48\cf2 BernoulliNB}{\f2\fs48\cf2  prediction\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\pntext\pard\plain\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\f2\fs48\cf2 Plotting }{\f2\fs48\cf2 Cross-Validated Predictions\par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li720\fi0 {\f2\fs48\cf2 \par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\f2\fs48\cf2 \par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\f2\fs48\cf2 \par 
+}\pard\plain\ltrpar\s3\li1800\fi-360\kerning24\fs40\cf1\lang1033\li1080 {\f2\fs48\cf2 \par 
+}
+}
