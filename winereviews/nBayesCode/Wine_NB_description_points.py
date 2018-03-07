@@ -12,7 +12,6 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 df = pd.read_csv('C:/data/wine/wine-reviews/winemag-data-130k-v2.csv')
 df.head(5)
 
-
 #looking at the stats for data, mean score of 88.44, mean price 35.36
 df.describe()
 
@@ -23,13 +22,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 vectorizer = TfidfVectorizer(stop_words='english',analyzer='word')
 x = vectorizer.fit_transform(df['description']) # x is vectorized description
 
-
 from sklearn.model_selection import train_test_split
 #description x, y is points
 #Split arrays or matrices into random train and test subsets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=32)
-
-
 
 from sklearn.naive_bayes import BernoulliNB
 clf = BernoulliNB()
@@ -37,26 +33,21 @@ clf.fit(x, y)
 BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
 print(clf.predict(x_test))
 
-clf.score(x_test, y_test) #38.7%
-clf.score(x_train, y_train)#38.8%
+from sklearn.metrics import accuracy_score
+accuracy_score(y_test, clf.predict(x_test), normalize=False)
 
 pd_df_results = pd.DataFrame(np.c_[clf.predict(x_test),y_test.values]) #creating data frame
 pd_df_results.describe()
 
-
-
-#http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html
-from sklearn.metrics import r2_score
-r2_score(y_test, pred)  #68%
-
-
-np.c_[pred,y_test.values] #showing results of prediction
- #creating data frame
-pd_df_results
+pd_df_results.to_csv('C:/data/wine/wine-reviews/out.csv')
 
 pd_df_results.boxplot() #box plot
 pd_df_results.describe() #statistics on test predictions, actuals
 pd_df_results.head(50) #top 50
+
+clf.score(x_test, y_test) #38.7%
+clf.score(x_train, y_train)#38.8%
+
 
 
 """
