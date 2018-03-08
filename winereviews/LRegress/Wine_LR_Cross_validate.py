@@ -17,6 +17,8 @@ df.describe()
 
 y = df['points']
 
+#http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+#Converts a collection of raw documents to a matrix of TF-IDF features.
 #also removing stop words
 from sklearn.feature_extraction.text import TfidfVectorizer
 vectorizer = TfidfVectorizer(stop_words='english',analyzer='word')
