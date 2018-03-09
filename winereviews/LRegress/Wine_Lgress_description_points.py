@@ -56,7 +56,7 @@ pred #show predictions
 from sklearn.metrics import r2_score
 r2_score(y_test, pred)  #68%
 
-
+#converting to a df, this took a while to learn for me but ultimately was only a small amount of code
 np.c_[pred,y_test.values] #showing results of prediction
 pd_df_results = pd.DataFrame(np.c_[pred,y_test.values]) #creating data frame
 pd_df_results
